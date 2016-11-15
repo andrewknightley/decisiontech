@@ -13,12 +13,12 @@ namespace DecisionTech.Tests
         public void TestMethod1()
         {
             var basketService = new BasketService();
+
+            // Could've added these a lists but didnt feel it necessary for the scale of these tests
             var butter = new Product() { Name = "Butter", Type = ProductType.Butter, Price = 0.80 };
             var milk = new Product() { Name = "Milk", Type = ProductType.Milk, Price = 1.15 };
             var bread = new Product() { Name = "Bread", Type = ProductType.Bread, Price = 1.00 };
             var expected = 2.95;
-
-            var productBasket = ProductBasket.Build();
 
             basketService.AddProduct(butter);
             basketService.AddProduct(milk);
@@ -32,13 +32,13 @@ namespace DecisionTech.Tests
         public void TestMethod2()
         {
             var basketService = new BasketService();
+
+            // Could've added these a lists but didnt feel it necessary for the scale of these tests
             var butter1 = new Product() { Name = "Butter", Type = ProductType.Butter, Price = 0.80 };
             var butter2 = new Product() { Name = "Butter", Type = ProductType.Butter, Price = 0.80 };
             var bread1 = new Product() { Name = "Bread", Type = ProductType.Bread, Price = 1.00 };
             var bread2 = new Product() { Name = "Bread", Type = ProductType.Bread, Price = 1.00 };
             var expected = 3.10;
-
-            var productBasket = ProductBasket.Build();
 
             basketService.AddProduct(butter1);
             basketService.AddProduct(butter2);
@@ -53,13 +53,13 @@ namespace DecisionTech.Tests
         public void TestMethod3()
         {
             var basketService = new BasketService();
-            
+
+            // Could've added these a lists but didnt feel it necessary for the scale of these tests
             var milk1 = new Product() { Name = "Milk", Type = ProductType.Milk, Price = 1.15 };
             var milk2 = new Product() { Name = "Milk", Type = ProductType.Milk, Price = 1.15 };
             var milk3 = new Product() { Name = "Milk", Type = ProductType.Milk, Price = 1.15 };
             var milk4 = new Product() { Name = "Milk", Type = ProductType.Milk, Price = 1.15 };
             var expected = 3.45;
-
 
             basketService.AddProduct(milk1);
             basketService.AddProduct(milk2);
@@ -74,7 +74,6 @@ namespace DecisionTech.Tests
         public void TestMethod4()
         {
             var basketService = new BasketService();
-
 
             // Could've added these a lists but didnt feel it necessary for the scale of these tests
             var milk1 = new Product() { Name = "Milk", Type = ProductType.Milk, Price = 1.15 };
